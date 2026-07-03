@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>成象 H5｜朋友试看分享说明</title>
+  <style>
+    :root {
+      --ink: #12110f;
+      --paper: #f5f0e8;
+      --muted: rgba(18, 17, 15, .62);
+      --line: rgba(18, 17, 15, .14);
+      --accent: #c6382f;
+      --white: #fffdf8;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      --serif: "Songti SC", "STSong", SimSun, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      letter-spacing: 0;
+    }
+
+    main {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    .hero {
+      min-height: 58vh;
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: .98;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    section {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .steps {
+      display: grid;
+      gap: 18px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .num {
+      color: var(--accent);
+      font: 700 18px/1 var(--sans);
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .quote {
+      margin-top: 18px;
+      padding: 22px;
+      background: var(--white);
+      border-left: 4px solid var(--accent);
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    code {
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(18, 17, 15, .08);
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: .92em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .note {
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 680px) {
+      main { width: min(100% - 24px, 980px); padding-top: 32px; }
+      .hero { min-height: 54vh; }
+      .grid { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 44px 1fr; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Friend Preview Package</div>
+      <h1>先给朋友看感觉，不做正式发布。</h1>
+      <p class="lead">这个文件夹已经整理成可上传的试看包。朋友真正打开的是 <code>index.html</code>。如果要生成在线链接，需要把整个文件夹上传到静态网页服务，不能只上传单个 HTML。</p>
+    </section>
+
+    <section>
+      <h2>推荐做法</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num">01</div>
+          <p>把整个 <code>chengxiang-h5-friend-preview-20260702</code> 文件夹上传到 Netlify、Vercel、Cloudflare Pages、GitHub Pages 或云存储静态网站。</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <p>上传后入口文件保持为 <code>index.html</code>，图片资源保持在 <code>assets/</code> 文件夹里。不要改动资源层级，否则案例图片可能无法显示。</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <p>拿到在线链接后，先自己用手机打开一次，确认首页、案例、详情、价格和咨询几个入口都能正常点击，再发给朋友。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>发给朋友的话术</h2>
+      <div class="quote">这是我们正在打磨的成象手机展示页，想先请你看整体感觉：你能不能快速看懂我们做什么、案例展示有没有信任感、有没有哪里读起来不清楚。这个版本先不要转发，我主要想听真实反馈。</div>
+    </section>
+
+    <section>
+      <h2>现在不建议公开扩散的原因</h2>
+      <div class="grid">
+        <div class="note">
+          <strong>联系方式还没换成正式入口</strong>
+          <p>页面已经适合试看，但正式咨询入口、微信或表单还需要确认。</p>
+        </div>
+        <div class="note">
+          <strong>价格口径还需要你最终拍板</strong>
+          <p>朋友试看可以看体验和表达，正式销售前还要统一价格和服务边界。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

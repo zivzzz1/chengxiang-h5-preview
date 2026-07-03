@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>成象｜让项目价值被看见</title>
+  <meta name="description" content="成象把案例、服务内容、服务方法和合作入口整理成更容易被理解、被信任、被转发的内容资产。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="成象｜让项目价值被看见">
+  <meta property="og:description" content="从真实案例建立信任，了解新媒体运营、品牌设计、运营增长和营销策略服务。">
+  <meta property="og:image" content="assets/case-thumbs/case-brand-01-pandaface-vi.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f4efe6">
+  <script>document.documentElement.classList.add("js");</script>
+  <style>
+    :root {
+      --ink: #11110f;
+      --paper: #f4efe6;
+      --paper-2: #e5dacb;
+      --white: #fffdf7;
+      --black: #080808;
+      --muted: rgba(17, 17, 15, .62);
+      --quiet: rgba(17, 17, 15, .42);
+      --line: rgba(17, 17, 15, .14);
+      --accent: #c6382f;
+      --sage: #63745b;
+      --gold: #c59a37;
+      --mono: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      --serif: "Songti SC", "STSong", "Noto Serif SC", SimSun, serif;
+      --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      background: #10100e;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 50% -12%, rgba(198, 56, 47, .18), transparent 28rem),
+        linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, .045) 1px, transparent 1px),
+        #10100e;
+      background-size: auto, 3.2rem 3.2rem, 3.2rem 3.2rem, auto;
+      font-family: var(--sans);
+      letter-spacing: 0;
+    }
+
+    a,
+    button {
+      color: inherit;
+      font: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    figure {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .device {
+      position: relative;
+      width: min(100%, 430px);
+      min-height: 100svh;
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(17, 17, 15, .045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(17, 17, 15, .04) 1px, transparent 1px),
+        var(--paper);
+      background-size: 2.9rem 2.9rem;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .12), 0 30px 90px rgba(0, 0, 0, .38);
+    }
+
+    .app {
+      min-height: 100svh;
+      padding-bottom: calc(4.7rem + env(safe-area-inset-bottom));
+    }
+
+    .statusbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4.1rem;
+      padding: .75rem 1rem;
+      background: rgba(244, 239, 230, .9);
+      border-bottom: 1px solid rgba(17, 17, 15, .08);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .72rem;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 5.8rem;
+      height: auto;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      color: var(--white);
+      background: var(--black);
+      border-radius: 50%;
+      font-family: var(--mono);
+      font-size: .64rem;
+      font-weight: 900;
+    }
+
+    .top-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.25rem;
+      padding: 0 .8rem;
+      color: var(--white);
+      background: var(--black);
+      font-size: .82rem;
+      font-weight: 780;
+    }
+
+    .back {
+      display: none;
+      align-items: center;
+      gap: .42rem;
+      min-height: 2.25rem;
+      padding: 0 .55rem;
+      color: var(--ink);
+      border: 1px solid rgba(17, 17, 15, .18);
+      background: rgba(255, 253, 247, .56);
+      font-size: .82rem;
+      font-weight: 760;
+    }
+
+    .statusbar.detail-mode .brand,
+    .statusbar.detail-mode .top-action {
+      display: none;
+    }
+
+    .statusbar.detail-mode .back {
+      display: inline-flex;
+    }
+
+    .screen {
+      display: none;
+      min-height: calc(100svh - 4.1rem - 4.7rem);
+      padding: 1rem;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    .screen.view-enter {
+      animation: screenIn .34s cubic-bezier(.2, .78, .2, 1) both;
+    }
+
+    .screen.view-enter[data-screen="caseDetail"] {
+      animation-name: detailIn;
+    }
+
+    @keyframes screenIn {
+      from {
+        opacity: 0;
+        transform: translateY(.7rem);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes detailIn {
+      from {
+        opacity: 0;
+        transform: translateY(1.35rem) scale(.985);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .home-hero {
+      position: relative;
+      min-height: 19rem;
+      padding: 1.1rem 0 0;
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 900;
+    }
+
+    .kicker::before {
+      content: "";
+      width: .5rem;
+      height: .5rem;
+      background: currentColor;
+      border-radius: 50%;
+    }
+
+    h1 {
+      margin-top: 1rem;
+      font-family: var(--serif);
+      font-size: 3.08rem;
+      line-height: .98;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin-top: .95rem;
+      color: rgba(17, 17, 15, .72);
+      font-size: 1rem;
+      line-height: 1.75;
+      font-weight: 650;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      margin-top: 1rem;
+      background: rgba(17, 17, 15, .16);
+    }
+
+    .hero-proof span {
+      min-height: 3.7rem;
+      padding: .65rem .55rem;
+      background: rgba(255, 253, 247, .62);
+    }
+
+    .hero-proof b {
+      display: block;
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--accent);
+    }
+
+    .hero-proof small {
+      display: block;
+      margin-top: .28rem;
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.25;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 14.6rem;
+      margin-top: 1.35rem;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--black);
+      border: 1px solid rgba(17, 17, 15, .22);
+      box-shadow: 0 1rem 2.6rem rgba(17, 17, 15, .22);
+      transition: transform .28s ease, box-shadow .28s ease;
+    }
+
+    .hero-card:active {
+      transform: scale(.985);
+      box-shadow: 0 .75rem 1.8rem rgba(17, 17, 15, .18);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(8, 8, 8, .1), rgba(8, 8, 8, .82));
+    }
+
+    .hero-card img {
+      height: 14.6rem;
+      object-fit: cover;
+      opacity: .8;
+      transform: scale(1.04);
+    }
+
+    .hero-card .copy {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 2;
+      padding: 1rem;
+    }
+
+    .hero-card b {
+      font-family: var(--mono);
+      font-size: .66rem;
+      color: rgba(255, 253, 247, .64);
+    }
+
+    .hero-card h2 {
+      margin-top: .45rem;
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      line-height: 1.12;
+    }
+
+    .hero-card p {
+      margin-top: .45rem;
+      color: rgba(255, 253, 247, .72);
+      font-size: .84rem;
+      line-height: 1.58;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+
+    .quick {
+      min-height: 6.7rem;
+      padding: .95rem;
+      text-align: left;
+      background: rgba(255, 253, 247, .62);
+      border: 1px solid rgba(17, 17, 15, .14);
+      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .quick:active {
+      transform: scale(.98);
+      border-color: rgba(198, 56, 47, .38);
+    }
+
+    .quick.dark {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .quick .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: .8rem;
+      color: var(--white);
+      background: var(--accent);
+      border-radius: 50%;
+      font-family: var(--mono);
+      font-size: .78rem;
+      font-weight: 900;
+    }
+
+    .quick.dark .icon {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .quick h3 {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .quick p {
+      margin-top: .35rem;
+      color: var(--muted);
+      font-size: .74rem;
+      line-height: 1.45;
+    }
+
+    .quick.dark p {
+      color: rgba(255, 253, 247, .64);
+    }
+
+    .feed {
+      margin-top: 1.25rem;
+      padding: .95rem;
+      background: rgba(255, 253, 247, .56);
+      border: 1px solid rgba(17, 17, 15, .12);
+    }
+
+    .feed-title,
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+      margin-bottom: .85rem;
+    }
+
+    .feed-title b,
+    .section-title b {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--accent);
+    }
+
+    .feed-list {
+      display: grid;
+      gap: 1px;
+      background: rgba(17, 17, 15, .14);
+    }
+
+    .feed-item {
+      display: grid;
+      grid-template-columns: 3.7rem 1fr;
+      gap: .75rem;
+      padding: .75rem 0;
+      text-align: left;
+      background: var(--paper);
+    }
+
+    .feed-item img {
+      width: 3.7rem;
+      height: 2.5rem;
+      object-fit: cover;
+      background: var(--black);
+    }
+
+    .feed-item h3 {
+      font-size: .86rem;
+      line-height: 1.34;
+    }
+
+    .feed-item p {
+      margin-top: .25rem;
+      color: var(--muted);
+      font-size: .72rem;
+      line-height: 1.42;
+    }
+
+    .page-head {
+      padding: .45rem 0 1rem;
+    }
+
+    .page-head h2 {
+      font-family: var(--serif);
+      font-size: 2.22rem;
+      line-height: 1.08;
+    }
+
+    .page-head p {
+      margin-top: .75rem;
+      color: var(--muted);
+      font-size: .92rem;
+      line-height: 1.66;
+    }
+
+    .featured-case {
+      position: relative;
+      min-height: 15rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--black);
+      border: 1px solid rgba(17, 17, 15, .18);
+      box-shadow: 0 .9rem 2rem rgba(17, 17, 15, .16);
+    }
+
+    .featured-case::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 8, 8, .06), rgba(8, 8, 8, .86));
+    }
+
+    .featured-case img {
+      height: 15rem;
+      object-fit: cover;
+      opacity: .86;
+    }
+
+    .featured-case .copy {
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 2;
+      padding: 1rem;
+    }
+
+    .featured-case b,
+    .rail-title b {
+      font-family: var(--mono);
+      color: rgba(255, 253, 247, .62);
+      font-size: .66rem;
+    }
+
+    .featured-case h3 {
+      margin-top: .42rem;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      line-height: 1.12;
+    }
+
+    .featured-case p {
+      margin-top: .45rem;
+      color: rgba(255, 253, 247, .68);
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .rail-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin: .15rem 0 .7rem;
+    }
+
+    .rail-title b {
+      color: var(--accent);
+    }
+
+    .case-rail {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 74%;
+      gap: .72rem;
+      margin: 0 -1rem 1rem;
+      padding: 0 1rem .35rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .case-rail::-webkit-scrollbar {
+      display: none;
+    }
+
+    .rail-card {
+      scroll-snap-align: start;
+      overflow: hidden;
+      text-align: left;
+      background: rgba(255, 253, 247, .68);
+      border: 1px solid rgba(17, 17, 15, .14);
+    }
+
+    .rail-card img {
+      height: 8.2rem;
+      object-fit: cover;
+    }
+
+    .rail-card span {
+      display: block;
+      padding: .72rem;
+    }
+
+    .rail-card b {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: .62rem;
+    }
+
+    .rail-card h3 {
+      margin-top: .28rem;
+      font-size: .98rem;
+      line-height: 1.3;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .72rem;
+    }
+
+    .case-card {
+      overflow: hidden;
+      text-align: left;
+      background: rgba(255, 253, 247, .62);
+      border: 1px solid rgba(17, 17, 15, .14);
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .case-card:active {
+      transform: scale(.985);
+      background: var(--white);
+      box-shadow: 0 .6rem 1.2rem rgba(17, 17, 15, .12);
+    }
+
+    .case-card figure {
+      position: relative;
+      height: 7.1rem;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .case-card img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .case-card em {
+      position: absolute;
+      left: .45rem;
+      top: .45rem;
+      padding: .25rem .42rem;
+      color: var(--white);
+      background: rgba(8, 8, 8, .78);
+      font-family: var(--mono);
+      font-size: .58rem;
+      font-style: normal;
+    }
+
+    .case-card .text {
+      padding: .68rem;
+    }
+
+    .case-card h3 {
+      font-size: .9rem;
+      line-height: 1.3;
+    }
+
+    .case-card p {
+      margin-top: .35rem;
+      color: var(--muted);
+      font-size: .72rem;
+      line-height: 1.42;
+    }
+
+    .service-stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .service-card {
+      padding: .95rem;
+      background: rgba(255, 253, 247, .64);
+      border: 1px solid rgba(17, 17, 15, .14);
+    }
+
+    .service-card.dark {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .service-card header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .service-card b {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: .66rem;
+    }
+
+    .service-card.dark b {
+      color: rgba(255, 253, 247, .6);
+    }
+
+    .service-card h3 {
+      margin-top: .45rem;
+      font-family: var(--serif);
+      font-size: 1.62rem;
+      line-height: 1.12;
+    }
+
+    .service-card p {
+      margin-top: .5rem;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.58;
+    }
+
+    .service-card.dark p {
+      color: rgba(255, 253, 247, .68);
+    }
+
+    .service-tag {
+      padding: .28rem .5rem;
+      border: 1px solid currentColor;
+      border-radius: 99px;
+      font-family: var(--mono);
+      font-size: .58rem;
+      white-space: nowrap;
+    }
+
+    .service-cases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .5rem;
+      margin-top: .85rem;
+    }
+
+    .service-case {
+      position: relative;
+      min-height: 5.7rem;
+      overflow: hidden;
+      text-align: left;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .service-case::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 8, 8, .02), rgba(8, 8, 8, .82));
+    }
+
+    .service-case img {
+      height: 5.7rem;
+      object-fit: cover;
+      opacity: .86;
+    }
+
+    .service-case span {
+      position: absolute;
+      inset: auto .45rem .42rem;
+      z-index: 2;
+      font-size: .62rem;
+      font-weight: 780;
+      line-height: 1.25;
+    }
+
+    .detail-hero {
+      margin: -1rem -1rem 0;
+      background: var(--black);
+    }
+
+    .detail-hero img {
+      height: 15rem;
+      object-fit: cover;
+    }
+
+    .detail-body {
+      padding-top: 1rem;
+    }
+
+    .detail-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: .75rem;
+      color: var(--quiet);
+      font-family: var(--mono);
+      font-size: .68rem;
+    }
+
+    .detail-body h2 {
+      margin-top: .75rem;
+      font-family: var(--serif);
+      font-size: 2.15rem;
+      line-height: 1.12;
+    }
+
+    .detail-body p {
+      margin-top: .8rem;
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.72;
+    }
+
+    .detail-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+
+    .solid,
+    .ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      font-weight: 820;
+    }
+
+    .solid {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .ghost {
+      border: 1px solid rgba(17, 17, 15, .2);
+      background: rgba(255, 253, 247, .58);
+    }
+
+    .info-list {
+      display: grid;
+      gap: 1px;
+      margin-top: 1.1rem;
+      background: rgba(17, 17, 15, .14);
+    }
+
+    .info-list li {
+      display: grid;
+      grid-template-columns: 4.4rem 1fr;
+      gap: .8rem;
+      padding: .78rem 0;
+      background: var(--paper);
+      color: rgba(17, 17, 15, .72);
+      font-size: .82rem;
+      line-height: 1.52;
+    }
+
+    .info-list b {
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: .68rem;
+    }
+
+    .next-case {
+      width: 100%;
+      margin-top: 1rem;
+      padding: .9rem;
+      text-align: left;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .next-case b {
+      display: block;
+      color: rgba(255, 253, 247, .58);
+      font-family: var(--mono);
+      font-size: .66rem;
+    }
+
+    .next-case span {
+      display: block;
+      margin-top: .35rem;
+      font-weight: 850;
+    }
+
+    .concept-stack {
+      display: grid;
+      gap: .8rem;
+    }
+
+    .concept-card {
+      padding: 1rem;
+      background: rgba(255, 253, 247, .62);
+      border: 1px solid rgba(17, 17, 15, .14);
+    }
+
+    .concept-card.dark {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .concept-card b {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--accent);
+    }
+
+    .concept-card.dark b {
+      color: rgba(255, 253, 247, .58);
+    }
+
+    .concept-card h3 {
+      margin-top: .75rem;
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    .concept-card p {
+      margin-top: .65rem;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.66;
+    }
+
+    .concept-card.dark p {
+      color: rgba(255, 253, 247, .68);
+    }
+
+    .method-rail {
+      display: grid;
+      gap: 0;
+      margin-top: .2rem;
+      border-left: 2px solid var(--black);
+    }
+
+    .method-step {
+      position: relative;
+      padding: 0 0 1.05rem 1rem;
+    }
+
+    .method-step::before {
+      content: attr(data-step);
+      position: absolute;
+      left: -.78rem;
+      top: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.45rem;
+      height: 1.45rem;
+      color: var(--white);
+      background: var(--black);
+      border-radius: 50%;
+      font-family: var(--mono);
+      font-size: .58rem;
+      font-weight: 900;
+    }
+
+    .method-step h3 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.18;
+    }
+
+    .method-step p {
+      margin-top: .45rem;
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.62;
+    }
+
+    .method-step.dark {
+      margin: .1rem 0 1rem;
+      padding: 1rem 1rem 1rem 1.15rem;
+      color: var(--white);
+      background: var(--black);
+      border-left: 0;
+    }
+
+    .method-step.dark::before {
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .method-step.dark p {
+      color: rgba(255, 253, 247, .68);
+    }
+
+    .price-recommend {
+      margin-bottom: .8rem;
+      padding: 1rem;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .price-recommend b {
+      font-family: var(--mono);
+      color: rgba(255, 253, 247, .58);
+      font-size: .66rem;
+    }
+
+    .price-recommend h3 {
+      margin-top: .55rem;
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      line-height: 1.1;
+    }
+
+    .price-recommend p {
+      margin-top: .58rem;
+      color: rgba(255, 253, 247, .7);
+      font-size: .86rem;
+      line-height: 1.62;
+    }
+
+    .price-recommend .solid {
+      width: 100%;
+      margin-top: .9rem;
+      color: var(--black);
+      background: var(--white);
+    }
+
+    .price-list {
+      display: grid;
+      gap: .72rem;
+    }
+
+    .price-card {
+      padding: 1rem;
+      background: rgba(255, 253, 247, .62);
+      border: 1px solid rgba(17, 17, 15, .14);
+    }
+
+    .price-card.featured {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .price-card .row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .price-card h3 {
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      line-height: 1.2;
+    }
+
+    .price-card strong {
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: .86rem;
+      white-space: nowrap;
+    }
+
+    .price-card.featured strong {
+      color: var(--white);
+    }
+
+    .price-card p {
+      margin-top: .62rem;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.58;
+    }
+
+    .price-card.featured p {
+      color: rgba(255, 253, 247, .66);
+    }
+
+    .contact-shell {
+      display: grid;
+      gap: .85rem;
+    }
+
+    .about-panel {
+      padding: 1rem;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .about-panel img {
+      width: 7rem;
+      filter: invert(1);
+    }
+
+    .about-panel h2 {
+      margin-top: 2rem;
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 2.1rem;
+      line-height: 1.15;
+    }
+
+    .about-panel p {
+      margin-top: .8rem;
+      color: rgba(255, 253, 247, .68);
+      font-size: .92rem;
+      line-height: 1.72;
+    }
+
+    .prepare {
+      display: grid;
+      gap: 1px;
+      margin-top: 1rem;
+      background: rgba(255, 253, 247, .18);
+    }
+
+    .prepare li {
+      padding: .78rem 0;
+      background: var(--black);
+      color: rgba(255, 253, 247, .78);
+      font-size: .84rem;
+    }
+
+    .contact-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .7rem;
+      margin-top: 1rem;
+    }
+
+    .contact-actions .ghost {
+      color: var(--white);
+      border-color: rgba(255, 253, 247, .28);
+      background: rgba(255, 253, 247, .06);
+    }
+
+    .contact-note {
+      margin-top: .9rem;
+      color: rgba(255, 253, 247, .48);
+      font-size: .72rem;
+      line-height: 1.5;
+    }
+
+    .tabbar {
+      position: fixed;
+      left: 50%;
+      bottom: 0;
+      z-index: 80;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: min(100%, 430px);
+      min-height: calc(4.35rem + env(safe-area-inset-bottom));
+      padding: .45rem .55rem calc(.45rem + env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      background: rgba(244, 239, 230, .92);
+      border-top: 1px solid rgba(17, 17, 15, .12);
+      backdrop-filter: blur(18px);
+    }
+
+    .tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .26rem;
+      min-width: 0;
+      color: rgba(17, 17, 15, .46);
+      font-size: .68rem;
+      font-weight: 760;
+      transition: color .2s ease, transform .2s ease;
+    }
+
+    .tab i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.45rem;
+      height: 1.45rem;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-style: normal;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .tab.active {
+      color: var(--ink);
+      transform: translateY(-.12rem);
+    }
+
+    .tab.active i {
+      color: var(--white);
+      background: var(--black);
+      border-color: var(--black);
+      box-shadow: 0 .5rem 1rem rgba(17, 17, 15, .16);
+    }
+
+    @media (max-width: 430px) {
+      .device {
+        box-shadow: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="device">
+    <div class="app">
+      <header class="statusbar" id="statusbar">
+        <button class="back" type="button" data-back>← 返回</button>
+        <div class="brand">
+          <img src="assets/chengxiang-logo-horizontal-black-v1.svg" alt="成象">
+          <span class="brand-badge">CX</span>
+        </div>
+      <button class="top-action" type="button" data-route="contact">合作</button>
+      </header>
+
+      <section class="screen active" data-screen="home">
+        <div class="home-hero">
+          <div class="kicker">CHENGXIANG CASE CENTER</div>
+          <h1>让价值<br>被看见</h1>
+          <p class="lead">成象把案例、服务路径和合作入口整理在一起，让客户先看见经验，再判断是否继续沟通。</p>
+
+          <div class="hero-proof" aria-label="成象案例与服务概览">
+            <span><b>56</b><small>真实案例资料</small></span>
+            <span><b>12</b><small>首批精选案例</small></span>
+            <span><b>4</b><small>合作入口</small></span>
+          </div>
+
+          <button class="hero-card" type="button" data-case="0" aria-label="打开推荐案例">
+            <img src="assets/case-thumbs/case-brand-01-pandaface-vi.png" alt="推荐案例缩略图">
+            <span class="copy">
+              <b>精选案例 / 品牌 VI 体系</b>
+              <h2>从案例开始建立信任</h2>
+              <p>看过具体项目，再了解成象如何整理品牌、招商和销售表达。</p>
+            </span>
+          </button>
+
+          <div class="quick-grid">
+            <button class="quick dark" type="button" data-route="services">
+              <span class="icon">01</span>
+              <h3>服务内容</h3>
+              <p>新媒体、品牌、增长和营销策略。</p>
+            </button>
+            <button class="quick" type="button" data-route="cases">
+              <span class="icon">02</span>
+              <h3>案例库</h3>
+              <p>用真实案例看我们做过什么。</p>
+            </button>
+            <button class="quick" type="button" data-route="concept">
+              <span class="icon">03</span>
+              <h3>服务方法</h3>
+              <p>我们如何把资料变成表达资产。</p>
+            </button>
+            <button class="quick" type="button" data-route="contact">
+              <span class="icon">04</span>
+              <h3>合作入口</h3>
+              <p>价格、资料清单和下一步动作。</p>
+            </button>
+          </div>
+
+          <div class="feed">
+            <div class="feed-title"><b>更新</b><b>LIVE</b></div>
+            <div class="feed-list">
+              <button class="feed-item" type="button" data-route="cases">
+                <img src="assets/case-thumbs/case-brand-04-huaihua-event.png" alt="文旅活动案例">
+                <span><h3>12 个代表案例已接入</h3><p>覆盖品牌策划、招商、文旅和内容创意。</p></span>
+              </button>
+              <button class="feed-item" type="button" data-route="services">
+                <img src="assets/brand-assets-mockup.png" alt="品牌资产样张">
+                <span><h3>服务内容已整理</h3><p>新媒体运营、品牌设计、运营增长和营销策略均有案例支撑。</p></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="services">
+        <div class="page-head">
+          <div class="kicker">SERVICES</div>
+          <h2>服务内容</h2>
+          <p>成象不是只做一个页面，而是围绕客户增长沟通，把内容、品牌、运营和策略整理成能被看见、被理解、被继续咨询的资产。</p>
+        </div>
+        <div class="service-stack" id="serviceStack"></div>
+      </section>
+
+      <section class="screen" data-screen="cases">
+        <div class="page-head">
+          <div class="kicker">CASES</div>
+          <h2>案例库</h2>
+          <p>精选品牌、招商、文旅和内容创意项目，先看我们处理过哪些类型的问题。</p>
+        </div>
+        <div id="featuredCase"></div>
+        <div class="rail-title"><b>精选横滑</b><b>SWIPE</b></div>
+        <div class="case-rail" id="caseRail" aria-label="精选案例横滑"></div>
+        <div class="rail-title"><b>全部案例</b><b>12 CASES</b></div>
+        <div class="case-grid" id="caseGrid"></div>
+      </section>
+
+      <section class="screen" data-screen="caseDetail">
+        <figure class="detail-hero"><img id="detailImage" src="" alt=""></figure>
+        <div class="detail-body">
+          <div class="detail-meta"><span id="detailType"></span><span>案例详情</span></div>
+          <h2 id="detailTitle"></h2>
+          <p id="detailSummary"></p>
+          <div class="detail-actions">
+            <button class="solid" type="button" data-route="contact">看合作入口</button>
+            <button class="ghost" type="button" data-route="services">看服务内容</button>
+          </div>
+          <ul class="info-list">
+            <li><b>问题</b><span id="detailProblem"></span></li>
+            <li><b>做法</b><span id="detailApproach"></span></li>
+            <li><b>交付</b><span id="detailDeliverables"></span></li>
+            <li><b>价值</b><span id="detailValue"></span></li>
+            <li><b>用途</b><span id="detailUse"></span></li>
+            <li><b>下一步</b><span>如果这类项目接近你的需求，可以继续查看价格或提交资料。</span></li>
+          </ul>
+          <button class="next-case" type="button" id="nextCase">
+            <b>NEXT CASE</b>
+            <span id="nextCaseTitle">继续看下一个案例</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="concept">
+        <div class="page-head">
+          <div class="kicker">METHOD</div>
+          <h2>服务方法</h2>
+          <p>成象不是先堆页面，而是先判断客户为什么看不懂，再把资料整理成能被转述、比较和继续咨询的表达资产。</p>
+        </div>
+        <div class="method-rail">
+          <article class="method-step" data-step="01">
+            <h3>先看资料。</h3>
+            <p>把旧 PPT、案例 PDF、官网、销售话术和老板想法放在一起，先找出客户最容易卡住的地方。</p>
+          </article>
+          <article class="method-step dark" data-step="02">
+            <h3>再拆表达路径。</h3>
+            <p>把品牌、案例、服务、价格和下一步动作重新排序，让客户按自己的兴趣逐层看下去。</p>
+          </article>
+          <article class="method-step" data-step="03">
+            <h3>做成可传播资产。</h3>
+            <p>输出手机 H5、销售私发包、案例页、公司介绍和方案页，让资料不只是文件，而是能推动沟通的入口。</p>
+          </article>
+          <article class="method-step" data-step="04">
+            <h3>最后进入合作。</h3>
+            <p>客户看完以后能知道你做过什么、适合谁、价格大概在哪、下一步该发什么资料。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" data-screen="contact">
+        <div class="page-head">
+          <div class="kicker">START</div>
+          <h2>合作入口</h2>
+          <p>价格和咨询放在同一个入口里。先判断你现在更需要背书页、销售资料包，还是一套完整的项目表达系统。</p>
+        </div>
+        <div class="contact-shell">
+          <div class="price-recommend">
+            <b>RECOMMENDED</b>
+            <h3>先做移动背书页。</h3>
+            <p>如果你已有案例和旧资料，但客户看完仍不知道你强在哪里，优先做这一项。它会把服务内容、代表案例、服务方法、价格和咨询入口整理成一个可转发页面。</p>
+            <button class="solid" type="button" data-route="services">先看服务内容</button>
+          </div>
+          <div class="price-list">
+            <article class="price-card">
+              <div class="row"><h3>品牌增长首诊</h3><strong>¥1,999 起</strong></div>
+              <p>快速判断当前表达问题，并给出一条可执行的优化路径。</p>
+            </article>
+            <article class="price-card">
+              <div class="row"><h3>品牌资产母包</h3><strong>¥9,800 起</strong></div>
+              <p>定位、服务结构、销售话术和基础视觉资产统一。</p>
+            </article>
+            <article class="price-card featured">
+              <div class="row"><h3>移动背书页</h3><strong>¥12,800 起</strong></div>
+              <p>首页、服务内容、案例、详情、服务方法、价格和咨询入口。</p>
+            </article>
+            <article class="price-card">
+              <div class="row"><h3>招商 / 投标方案</h3><strong>¥15,000 起</strong></div>
+              <p>用于招商、投标、路演和客户沟通的方案结构与页面表达。</p>
+            </article>
+          </div>
+          <div class="about-panel">
+            <img src="assets/chengxiang-logo-horizontal-black-v1.svg" alt="成象">
+            <h2>先发资料，先判断。</h2>
+            <p>把你已有的案例、公司介绍、旧 PPT、销售资料或官网发来，我们先判断最适合做成哪类表达资产。</p>
+            <ul class="prepare">
+              <li>现有案例 PDF / PPT / 图片</li>
+              <li>最想成交的客户类型</li>
+              <li>服务范围和预算预期</li>
+              <li>希望客户看完后采取的动作</li>
+            </ul>
+            <div class="contact-actions">
+              <button class="solid" type="button" id="copyList">复制清单</button>
+              <button class="ghost" type="button" data-route="cases">先看案例</button>
+            </div>
+            <p class="contact-note" id="copyState">正式发布前可替换为微信、电话或表单入口。</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="tabbar" aria-label="底部导航">
+      <button class="tab active" type="button" data-tab="home"><i>首</i><span>首页</span></button>
+      <button class="tab" type="button" data-tab="services"><i>服</i><span>服务</span></button>
+      <button class="tab" type="button" data-tab="cases"><i>案</i><span>案例</span></button>
+      <button class="tab" type="button" data-tab="concept"><i>法</i><span>方法</span></button>
+      <button class="tab" type="button" data-tab="contact"><i>合</i><span>合作</span></button>
+    </nav>
+  </div>
+
+  <script>
+    const cases = [
+      {
+        title: "PANDAFACE VI",
+        type: "品牌 VI",
+        image: "assets/case-thumbs/case-brand-01-pandaface-vi.png",
+        summary: "品牌识别、视觉规范和基础资产体系案例。",
+        value: "帮助品牌建立统一识别，让官网、销售资料和公司介绍保持一致。",
+        use: "适用于品牌资产母包、官网升级、销售资料和公司介绍。"
+      },
+      {
+        title: "天裁会品牌焕新",
+        type: "品牌焕新",
+        image: "assets/case-thumbs/case-brand-02-tiancai-refresh.png",
+        summary: "品牌定位、形象焕新和表达体系重建案例。",
+        value: "帮助旧品牌重新组织认知、视觉和客户沟通方式。",
+        use: "适用于品牌升级、服务菜单重构和对外介绍更新。"
+      },
+      {
+        title: "启福九州产品策划",
+        type: "产品策划",
+        image: "assets/case-thumbs/case-brand-03-qifu-product.png",
+        summary: "产品卖点、目标客群和商业表达整理案例。",
+        value: "把产品优势整理成客户听得懂、销售讲得清的语言。",
+        use: "适用于新品上市、招商前包装和销售资料升级。"
+      },
+      {
+        title: "文旅灯会活动",
+        type: "文旅活动",
+        image: "assets/case-thumbs/case-brand-04-huaihua-event.png",
+        summary: "城市文旅、灯会活动和事件营销策划案例。",
+        value: "把主题、活动动线、传播事件和招商表达组织成完整方案。",
+        use: "适用于文旅、商业街区、节庆活动和城市级活动。"
+      },
+      {
+        title: "健康产品出海",
+        type: "出海表达",
+        image: "assets/case-thumbs/case-brand-05-aoe-export.png",
+        summary: "健康科技产品的海外市场表达和资料包装案例。",
+        value: "把复杂产品转译成清楚的价值、场景和购买理由。",
+        use: "适用于科技、健康、硬件、跨境和渠道招商项目。"
+      },
+      {
+        title: "西贝宣传片提案",
+        type: "内容创意",
+        image: "assets/case-thumbs/case-brand-06-xibei-tvc.png",
+        summary: "品牌内容创意、宣传片结构和传播脚本案例。",
+        value: "把品牌策略转成更容易被传播的视频结构和内容脚本。",
+        use: "适用于广告片、短视频、品牌故事和公域传播素材。"
+      },
+      {
+        title: "白酒商业计划书",
+        type: "商业计划书",
+        image: "assets/case-thumbs/case-invest-01-liquor-bp.png",
+        summary: "品牌故事、商业模型和招商融资表达案例。",
+        value: "把商业逻辑、品牌故事和合作机会整理成清楚的沟通材料。",
+        use: "适用于招商、融资、渠道合作和合伙人沟通。"
+      },
+      {
+        title: "大风起招商手册",
+        type: "招商手册",
+        image: "assets/case-thumbs/case-invest-02-dafengqi.png",
+        summary: "项目价值、合作机制和招商资料包装案例。",
+        value: "把项目价值和合作机制讲成客户愿意继续了解的机会。",
+        use: "适用于渠道招商、加盟合作和项目介绍。"
+      },
+      {
+        title: "君子和融资路演案",
+        type: "融资路演",
+        image: "assets/case-thumbs/case-invest-03-junzihe-roadshow.png",
+        summary: "高压沟通场景下的路演结构和说服表达案例。",
+        value: "把价值、商业模型和增长预期组织成更容易跟进的路径。",
+        use: "适用于融资路演、项目汇报和投资沟通。"
+      },
+      {
+        title: "家庭健康招商版",
+        type: "健康消费",
+        image: "assets/case-thumbs/case-invest-04-jimei-health.png",
+        summary: "健康消费类产品的招商表达和生活方式包装案例。",
+        value: "帮助健康产品建立信任场景、生活方式语境和销售表达。",
+        use: "适用于保健、医美、健康生活方式和渠道项目。"
+      },
+      {
+        title: "马术庄园策划案",
+        type: "文旅项目",
+        image: "assets/case-thumbs/case-invest-05-huaiye-manor.png",
+        summary: "文旅庄园、体验消费和项目策划表达案例。",
+        value: "把空间体验、消费场景和项目价值组织成可沟通的故事。",
+        use: "适用于文旅综合体、庄园、营地和体验商业。"
+      },
+      {
+        title: "餐饮品牌招商",
+        type: "餐饮招商",
+        image: "assets/case-thumbs/case-invest-06-ludaxia.png",
+        summary: "餐饮连锁、加盟招商和门店模型表达案例。",
+        value: "把餐饮模型、门店优势和合作方式整理成招商材料。",
+        use: "适用于餐饮、连锁、加盟和城市合伙人项目。"
+      }
+    ];
+
+    const services = [
+      {
+        title: "新媒体运营",
+        tag: "CONTENT",
+        intro: "把品牌故事、项目亮点和活动内容拆成可持续发布的选题、脚本和传播素材。",
+        cases: [5, 3, 4]
+      },
+      {
+        title: "品牌设计",
+        tag: "BRAND",
+        intro: "从视觉识别、品牌焕新到产品表达，把品牌看起来、讲起来和卖起来统一。",
+        cases: [0, 1, 2],
+        dark: true
+      },
+      {
+        title: "运营增长",
+        tag: "GROWTH",
+        intro: "围绕招商、转化、渠道合作和销售沟通，把项目优势整理成能推动下一步的材料。",
+        cases: [7, 11, 9]
+      },
+      {
+        title: "营销策略",
+        tag: "STRATEGY",
+        intro: "处理定位、商业模型、项目策划、路演和传播路径，让复杂项目更容易被判断和转述。",
+        cases: [6, 10, 8],
+        dark: true
+      }
+    ];
+
+    const screens = Array.from(document.querySelectorAll("[data-screen]"));
+    const tabs = Array.from(document.querySelectorAll("[data-tab]"));
+    const statusbar = document.getElementById("statusbar");
+    const serviceStack = document.getElementById("serviceStack");
+    const featuredCase = document.getElementById("featuredCase");
+    const caseRail = document.getElementById("caseRail");
+    const caseGrid = document.getElementById("caseGrid");
+    const nextCase = document.getElementById("nextCase");
+    const copyList = document.getElementById("copyList");
+    const copyState = document.getElementById("copyState");
+    let current = "home";
+    let previous = "home";
+    let currentCaseIndex = 0;
+
+    const detailProfiles = {
+      "品牌 VI": {
+        problem: "品牌材料分散，视觉和销售介绍不能稳定表达同一个品牌。",
+        approach: "先统一识别、色彩、版式和应用场景，再让官网、销售资料和公司介绍共同指向同一套认知。",
+        deliverables: "Logo 延展、VI 规范、品牌资产页、应用样张、销售资料视觉基准。"
+      },
+      "品牌焕新": {
+        problem: "老品牌有业务基础，但对外形象、服务菜单和客户沟通方式需要重新组织。",
+        approach: "从定位、识别、服务结构和沟通语气切入，把旧认知翻译成新的客户入口。",
+        deliverables: "品牌焕新方向、视觉系统、服务表达、客户介绍页和基础销售素材。"
+      },
+      "产品策划": {
+        problem: "产品有卖点，但客户不知道为什么需要、适合谁、怎么购买或合作。",
+        approach: "把产品优势、使用场景、人群痛点和销售理由重新排序，形成可讲、可看、可转发的材料。",
+        deliverables: "产品价值结构、卖点提炼、销售页、招商说明和沟通话术。"
+      },
+      "文旅活动": {
+        problem: "活动有主题和资源，但缺少能让游客、商户和甲方同时理解的整体表达。",
+        approach: "把主题、空间动线、活动节奏、传播事件和招商理由组织成一套方案路径。",
+        deliverables: "主题策划、活动动线、传播玩法、招商表达、执行页面和视觉方向。"
+      },
+      "出海表达": {
+        problem: "复杂产品进入新市场时，技术优势难以直接变成客户购买理由。",
+        approach: "把功能、场景、信任点和渠道语言翻译成目标市场能快速理解的表达。",
+        deliverables: "海外表达框架、产品介绍、渠道材料、销售话术和视觉页面。"
+      },
+      "内容创意": {
+        problem: "品牌有故事，但视频、短内容或传播脚本缺少清晰结构。",
+        approach: "从品牌策略拆出可拍、可传播、可记住的内容钩子和脚本节奏。",
+        deliverables: "内容创意方向、脚本结构、画面节奏、传播标题和执行参考。"
+      },
+      "商业计划书": {
+        problem: "项目价值、商业模型和合作机会分散在资料里，难以让投资人或渠道快速判断。",
+        approach: "把品牌故事、市场机会、商业路径和合作价值重排成高压沟通场景下的叙事。",
+        deliverables: "商业计划书结构、招商融资表达、核心页面和口头汇报路径。"
+      },
+      "招商手册": {
+        problem: "项目想招商，但合作机制、收益逻辑和项目价值没有被清楚包装。",
+        approach: "用客户视角重排项目卖点、合作方式、支持政策和下一步洽谈入口。",
+        deliverables: "招商手册、合作政策页、项目介绍、渠道沟通话术和报名入口。"
+      },
+      "融资路演": {
+        problem: "路演时间短，必须快速让对方理解价值、模型、增长和风险边界。",
+        approach: "压缩信息密度，把商业逻辑拆成问题、机会、方案、验证和资金用途。",
+        deliverables: "路演 PPT、讲稿结构、投资沟通页、核心数据表达和问答准备。"
+      },
+      "健康消费": {
+        problem: "健康产品容易陷入功效堆砌，客户缺少生活方式场景和信任理由。",
+        approach: "把产品功能放进人群、场景和渠道语境，减少硬卖，增加可信表达。",
+        deliverables: "产品招商资料、生活方式页面、渠道介绍和销售问答。"
+      },
+      "文旅项目": {
+        problem: "空间体验、消费场景和项目故事没有连成可招商、可传播的整体。",
+        approach: "把空间资源、客群场景、体验内容和商业合作组织成可沟通的故事。",
+        deliverables: "文旅策划案、空间体验叙事、招商资料和项目汇报页。"
+      },
+      "餐饮招商": {
+        problem: "餐饮模型、门店优势和加盟合作方式需要被讲成清楚的商业机会。",
+        approach: "梳理品牌定位、门店模型、合作政策和城市合伙人路径。",
+        deliverables: "招商手册、加盟说明、门店模型表达和渠道邀约话术。"
+      }
+    };
+
+    function detailFor(item) {
+      return detailProfiles[item.type] || {
+        problem: "客户已有资料，但缺少让外部快速理解价值的表达结构。",
+        approach: "把案例、服务、价格和下一步动作重新排序，形成可浏览、可转发的沟通入口。",
+        deliverables: "案例页、服务说明、价格入口、咨询清单和销售沟通素材。"
+      };
+    }
+
+    function renderCases() {
+      const first = cases[0];
+      featuredCase.innerHTML = `
+        <button class="featured-case" type="button" data-case="0" aria-label="打开精选案例">
+          <img src="${first.image}" alt="${first.title}">
+          <span class="copy">
+            <b>FEATURED / ${first.type}</b>
+            <h3>${first.title}</h3>
+            <p>${first.summary}</p>
+          </span>
+        </button>
+      `;
+
+      caseRail.innerHTML = cases.slice(1, 5).map((item, offset) => `
+        <button class="rail-card" type="button" data-case="${offset + 1}">
+          <img src="${item.image}" alt="${item.title}">
+          <span>
+            <b>${item.type}</b>
+            <h3>${item.title}</h3>
+          </span>
+        </button>
+      `).join("");
+
+      caseGrid.innerHTML = cases.slice(5).map((item, offset) => {
+        const index = offset + 5;
+        return `
+        <button class="case-card" type="button" data-case="${index}">
+          <figure>
+            <img src="${item.image}" alt="${item.title}">
+            <em>案例</em>
+          </figure>
+          <div class="text">
+            <h3>${item.title}</h3>
+            <p>${item.type}</p>
+          </div>
+        </button>
+      `;
+      }).join("");
+    }
+
+    function renderServices() {
+      serviceStack.innerHTML = services.map((service, serviceIndex) => `
+        <article class="service-card${service.dark ? " dark" : ""}">
+          <header>
+            <span>
+              <b>${service.tag}</b>
+              <h3>${service.title}</h3>
+            </span>
+            <em class="service-tag">0${serviceIndex + 1}</em>
+          </header>
+          <p>${service.intro}</p>
+          <div class="service-cases" aria-label="${service.title}代表案例">
+            ${service.cases.map((caseIndex) => {
+              const item = cases[caseIndex];
+              return `
+                <button class="service-case" type="button" data-case="${caseIndex}" aria-label="打开${item.title}">
+                  <img src="${item.image}" alt="${item.title}">
+                  <span>${item.title}</span>
+                </button>
+              `;
+            }).join("")}
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function show(route) {
+      previous = current === "caseDetail" ? previous : current;
+      current = route;
+      screens.forEach((screen) => {
+        const isActive = screen.dataset.screen === route;
+        screen.classList.toggle("active", isActive);
+        screen.classList.remove("view-enter");
+        if (isActive) {
+          requestAnimationFrame(() => screen.classList.add("view-enter"));
+        }
+      });
+      tabs.forEach((tab) => {
+        const tabRoute = tab.dataset.tab;
+        tab.classList.toggle("active", tabRoute === route || (route === "caseDetail" && tabRoute === "cases"));
+      });
+      statusbar.classList.toggle("detail-mode", route === "caseDetail");
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+
+    function openCase(index) {
+      const item = cases[index];
+      if (!item) return;
+      currentCaseIndex = index;
+      const profile = detailFor(item);
+      previous = "cases";
+      document.getElementById("detailImage").src = item.image;
+      document.getElementById("detailImage").alt = item.title;
+      document.getElementById("detailType").textContent = item.type;
+      document.getElementById("detailTitle").textContent = item.title;
+      document.getElementById("detailSummary").textContent = item.summary;
+      document.getElementById("detailProblem").textContent = profile.problem;
+      document.getElementById("detailApproach").textContent = profile.approach;
+      document.getElementById("detailDeliverables").textContent = profile.deliverables;
+      document.getElementById("detailValue").textContent = item.value;
+      document.getElementById("detailUse").textContent = item.use;
+      const next = cases[(index + 1) % cases.length];
+      document.getElementById("nextCaseTitle").textContent = `继续看：${next.title}`;
+      show("caseDetail");
+    }
+
+    document.addEventListener("click", (event) => {
+      const routeButton = event.target.closest("[data-route]");
+      if (routeButton) {
+        show(routeButton.dataset.route);
+        return;
+      }
+
+      const tabButton = event.target.closest("[data-tab]");
+      if (tabButton) {
+        show(tabButton.dataset.tab);
+        return;
+      }
+
+      const caseButton = event.target.closest("[data-case]");
+      if (caseButton) {
+        openCase(Number(caseButton.dataset.case));
+        return;
+      }
+
+      if (event.target.closest("[data-back]")) {
+        show(previous || "cases");
+      }
+    });
+
+    nextCase.addEventListener("click", () => {
+      openCase((currentCaseIndex + 1) % cases.length);
+    });
+
+    copyList.addEventListener("click", async () => {
+      const text = "成象资料清单：1. 现有案例 PDF / PPT / 图片；2. 最想成交的客户类型；3. 服务范围和预算预期；4. 希望客户看完后采取的动作。";
+      try {
+        await navigator.clipboard.writeText(text);
+        copyState.textContent = "资料清单已复制，可以直接发给需要准备资料的人。";
+      } catch (error) {
+        copyState.textContent = text;
+      }
+    });
+
+    renderCases();
+    renderServices();
+  </script>
+</body>
+</html>

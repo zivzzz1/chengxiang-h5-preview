@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520">
+
+<g transform="translate(120 118) scale(1.15)"><g id="chengxiang-symbol" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 150 L20 88 A80 80 0 0 1 180 88 L180 150"/>
+  <path d="M20 150 L54 150 L54 116"/>
+  <path d="M120 88 L120 150 L154 150 L154 110"/>
+  <path d="M94 34 C134 58 124 98 92 110"/>
+  <circle cx="64" cy="96" r="5" fill="#000000" stroke="none"/>
+</g></g>
+<text x="430" y="214" fill="#000000" font-family="Songti SC, STSong, serif" font-size="124" font-weight="600">成象</text>
+<text x="438" y="294" fill="#000000" font-family="Arial, sans-serif" font-size="34" letter-spacing="9">CHENGXIANG</text>
+<text x="120" y="450" fill="#000000" font-family="Hiragino Sans GB, Arial, sans-serif" font-size="42" letter-spacing="8">AI 品牌增长服务公司</text>
+</svg>
